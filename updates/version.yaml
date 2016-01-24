@@ -1,0 +1,4 @@
+1.0.1: First version of hotnews
+1.0.2: 
+      - Init model for hotnews
+      - create_messages_table.php

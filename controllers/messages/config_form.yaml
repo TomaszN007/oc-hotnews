@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Message
+
+# Model Form Field configuration
+form: $/datacenterppnt/hotnews/models/messages/fields.yaml
+
+# Model Class name
+modelClass: Datacenterppnt\Hotnews\Models\Messages
+
+# Default redirect location
+defaultRedirect: datacenterppnt/hotnews/messages
+
+# Create page
+create:
+    title: Create Message
+    redirect: datacenterppnt/hotnews/messages/update/:id
+    redirectClose: datacenterppnt/hotnews/messages
+
+# Update page
+update:
+    title: Edit Message
+    redirect: datacenterppnt/hotnews/messages
+    redirectClose: datacenterppnt/hotnews/messages
+
+# Preview page
+preview:
+    title: Preview Message
