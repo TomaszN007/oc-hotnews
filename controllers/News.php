@@ -18,6 +18,8 @@ class News extends Controller
 
     public $bodyClass = 'compact-container';
     
+    public $requiredPermissions = ['datacenterppnt.hotnews.all'];
+    
     public function __construct()
     {
         parent::__construct();

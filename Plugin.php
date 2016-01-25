@@ -10,10 +10,9 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
-
   // CKEditor is the best [with skins]!!
-  public $require = ['Shahiemseymor.Ckeditor'];
-  
+  // public $require = ['Shahiemseymor.Ckeditor'];
+
   /**
    * Returns information about this plugin.
    *
@@ -22,9 +21,9 @@ class Plugin extends PluginBase
   public function pluginDetails()
   {
     return [
-        'name' => 'hotnews',
-        'description' => 'Pojedyńcze/Wielokrotne wiadomości wyświetlane na stronie',
-        'author' => 'datacenterppnt',
+        'name' => 'Hotnews',
+        'description' => 'Pojedyńcze i wielokrotne wiadomości na stronie',
+        'author' => 'Tomasz Nowak',
         'icon' => 'icon-fire'
     ];
   }
@@ -38,6 +37,7 @@ class Plugin extends PluginBase
   {
     return [
         'Datacenterppnt\Hotnews\Components\hotnews' => 'cHotnews',
+        'Datacenterppnt\Hotnews\Components\news' => 'cNews',
     ];
   }
 
@@ -51,7 +51,7 @@ class Plugin extends PluginBase
     return [
         'datacenterppnt.hotnews.all' => [
             'tab' => 'hotnews',
-            'label' => 'Zarzadzanie hotnews\'ami'
+            'label' => 'Zarządzanie komponentem Hotnews'
         ],
     ];
   }

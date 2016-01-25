@@ -36,8 +36,6 @@ class Messages extends Model
     public function scopePublished( $query )
     {
       $today = new \DateTime();
-      $today->setTimezone(new \DateTimeZone('Europe/Warsaw'));      
-      
       return $query
               ->where( 'status', '=', 1 )
               ->where( 'published_at', '<', $today->format( 'Y-m-d H:i:s' ) );

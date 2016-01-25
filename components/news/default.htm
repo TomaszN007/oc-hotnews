@@ -1,0 +1,37 @@
+{% set posts = __SELF__.news %}
+
+<ul class="post-list">
+    {% for post in posts %}
+    <li>
+        <h3>{{ post.title }}</h3>
+        {% if post.small_content %}
+        <div class="introductory">{{ post.small_content|raw }}</div>
+        {% endif %}
+        
+        {% if post.full_content %}
+        <div class="introductory">{{ post.full_content|raw }}</div>
+        {% endif %}
+        
+    </li>
+    {% else %}
+    <li class="no-data">{{ post.noPostsMessage }}</li>
+    {% endfor %}
+</ul>
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

@@ -11,8 +11,8 @@ class Hotnews extends ComponentBase
   public function componentDetails()
   {
     return [
-        'name' => 'Hotnews Component',
-        'description' => 'Wyświetla najważniejsze wiadomości'
+        'name' => 'Hotnews',
+        'description' => 'Wyświetlanie najważniejszych wiadomości'
     ];
   }
 
