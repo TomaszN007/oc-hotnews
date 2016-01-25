@@ -7,7 +7,9 @@ use Model;
  */
 class Messages extends Model
 {
-
+  
+    use \October\Rain\Database\Traits\Validation;
+  
     /**
      * @var string The database table used by the model.
      */
@@ -25,18 +27,11 @@ class Messages extends Model
     
     protected $dates = ['published_at'];
 
-    /**
-     * @var array Relations
-     */
-    public $hasOne = [];
-    public $hasMany = [];
-    public $belongsTo = [];
-    public $belongsToMany = [];
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
+    public $rules = [
+        'title'   => 'required|between:1,255',
+        'message' => 'required',
+        'status'  => 'required|between:1,3|numeric'
+    ];
 
     public function scopePublished( $query )
     {

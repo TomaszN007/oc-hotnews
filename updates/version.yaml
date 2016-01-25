@@ -2,3 +2,7 @@
 1.0.2: 
       - Init model for hotnews
       - create_messages_table.php
+1.0.3:
+      - Add news model
+      - create_news_table.php
+      - Add plugin require for shahiemseymor/ckeditor plugin

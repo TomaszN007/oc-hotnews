@@ -1,0 +1,52 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Tytul
+        type: text
+        span: auto
+        required: true
+        
+    slug:
+        label: Url
+        span: auto
+        preset: title
+        required: true
+
+tabs:
+    fields:
+      small_content:
+          label: Wiadomość podstawowa
+          type: ShahiemSeymor\Ckeditor\FormWidgets\Wysiwyg
+          tab: Podstawowa
+          required: true
+
+      full_content:
+          label: Wiadomość rozszerzona
+          tab: Rozszerzona
+          type: ShahiemSeymor\Ckeditor\FormWidgets\Wysiwyg
+          required: false
+
+
+secondaryTabs:
+    fields:
+        image:
+            label: Zdjęcie
+            type: mediafinder
+            mode: image
+
+        status:
+            label: Status
+            required: true
+            type: dropdown
+            options:
+                1: Opublikowany
+                2: Wyłączony
+                3: Roboczy
+
+        published_at:
+            label: Opublikowany
+            type: datepicker
+            mode: datetime

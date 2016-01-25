@@ -11,6 +11,9 @@ use System\Classes\PluginBase;
 class Plugin extends PluginBase
 {
 
+  // CKEditor is the best [with skins]!!
+  public $require = ['Shahiemseymor.Ckeditor'];
+  
   /**
    * Returns information about this plugin.
    *
@@ -72,6 +75,12 @@ class Plugin extends PluginBase
                     'label' => 'Hotnews',
                     'icon' => 'icon-fire',
                     'url' => Backend::url( 'datacenterppnt/hotnews/messages' ),
+                    'permissions' => ['datacenterppnt.hotnews.all' ],
+                ],
+                'news' => [
+                    'label' => 'Aktualności',
+                    'icon' => 'icon-file-text-o',
+                    'url' => Backend::url( 'datacenterppnt/hotnews/news' ),
                     'permissions' => ['datacenterppnt.hotnews.all' ],
                 ],
             ]
