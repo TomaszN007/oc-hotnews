@@ -10,6 +10,9 @@ use Redirect;
 class News extends ComponentBase
 {
 
+  /**
+   * @var model
+   */
   public $news;
   
   public function componentDetails()

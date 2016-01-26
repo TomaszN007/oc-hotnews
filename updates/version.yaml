@@ -5,3 +5,4 @@
 1.0.3:
       - Add news model
       - create_news_table.php   
+1.0.4: Add single news component

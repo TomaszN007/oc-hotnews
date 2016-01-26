@@ -37,6 +37,7 @@ class Plugin extends PluginBase
   {
     return [
         'Datacenterppnt\Hotnews\Components\hotnews' => 'cHotnews',
+        'Datacenterppnt\Hotnews\Components\viewnews' => 'cViewNews',
         'Datacenterppnt\Hotnews\Components\news' => 'cNews',
     ];
   }
