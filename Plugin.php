@@ -22,7 +22,7 @@ class Plugin extends PluginBase
   {
     return [
         'name' => 'Hotnews',
-        'description' => 'Pojedyńcze i wielokrotne wiadomości na stronie',
+        'description' => 'datacenterppnt.hotnews::lang.plugin.description',//  Pojedyńcze i wielokrotne wiadomości na stronie',
         'author' => 'Tomasz Nowak',
         'icon' => 'icon-fire'
     ];
@@ -50,8 +50,8 @@ class Plugin extends PluginBase
   {
     return [
         'datacenterppnt.hotnews.all' => [
-            'tab' => 'hotnews',
-            'label' => 'Zarządzanie komponentem Hotnews'
+            'tab' => 'datacenterppnt.hotnews::lang.plugin.premission_hotnews_all_title',
+            'label' => 'datacenterppnt.hotnews::lang.plugin.premission_hotnews_all'
         ],
     ];
   }
@@ -65,20 +65,20 @@ class Plugin extends PluginBase
   {
     return [
         'hotnews' => [
-            'label' => 'Hotnews',
+            'label' => 'datacenterppnt.hotnews::lang.plugin.menu_hotnews',
             'url' => Backend::url( 'datacenterppnt/hotnews/messages' ),
             'icon' => 'icon-fire',
             'permissions' => ['datacenterppnt.hotnews.all' ],
             'order' => 500,
             'sideMenu' => [
                 'messages' => [
-                    'label' => 'Hotnews',
+                    'label' => 'datacenterppnt.hotnews::lang.plugin.menu_hotnews',
                     'icon' => 'icon-fire',
                     'url' => Backend::url( 'datacenterppnt/hotnews/messages' ),
                     'permissions' => ['datacenterppnt.hotnews.all' ],
                 ],
                 'news' => [
-                    'label' => 'Aktualności',
+                    'label' => 'datacenterppnt.hotnews::lang.plugin.menu_news',
                     'icon' => 'icon-file-text-o',
                     'url' => Backend::url( 'datacenterppnt/hotnews/news' ),
                     'permissions' => ['datacenterppnt.hotnews.all' ],

@@ -4,12 +4,12 @@
 
 fields:
     title:
-        label: Tytul
+        label: datacenterppnt.hotnews::lang.hotnews_messages.field_title
         type: text
         required: true
             
     message:
-        label: Wiadomosc
+        label: datacenterppnt.hotnews::lang.hotnews_messages.field_message
         type: ShahiemSeymor\Ckeditor\FormWidgets\Wysiwyg
         searchable: true
 
@@ -17,20 +17,20 @@ fields:
 secondaryTabs:
     fields:
         image:
-            label: Zdjęcie
+            label: datacenterppnt.hotnews::lang.hotnews_messages.field_picture
             type: mediafinder
             mode: image
 
         status:
-            label: Status
+            label: datacenterppnt.hotnews::lang.hotnews_messages.field_status
             required: true
             type: dropdown
             options:
-                1: Opublikowany
-                2: Wyłączony
-                3: Roboczy
+                1: datacenterppnt.hotnews::lang.hotnews_status_options.published
+                2: datacenterppnt.hotnews::lang.hotnews_status_options.inactive
+                3: datacenterppnt.hotnews::lang.hotnews_status_options.draft
 
         published_at:
-            label: opublikowany
+            label: datacenterppnt.hotnews::lang.hotnews_messages.field_published_at
             type: datepicker
             mode: datetime
