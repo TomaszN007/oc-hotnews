@@ -37,15 +37,11 @@ class ViewNews extends Model
    */
   public function scopeViewSingleNews( $query, $option )
   {
-    if ( in_array( 'slug', $option ) )
-    {
-      $today = new \DateTime();
-
-      return $query
-                      ->where( 'slug', $option['slug'] )
-                      ->where( 'status', '=', 1 )
-                      ->where( 'published_at', '<', $today->format( 'Y-m-d H:i:s' ) );
-    }
+    $today = new \DateTime();
+    return $query
+                    ->where( 'slug', '=', $option['slug'] )
+                    ->where( 'status', '=', 1 )
+                    ->where( 'published_at', '<', $today->format( 'Y-m-d H:i:s' ) );
   }
 
 }

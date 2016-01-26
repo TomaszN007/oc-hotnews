@@ -38,6 +38,16 @@ class ViewNews extends ComponentBase
     $this->post = SingleNews::viewSingleNews( [
                 'slug' => $this->property( 'slug' )
             ] )->first();
+
+    // #origin:
+    // https://github.com/octobercms/october/issues/563#issuecomment-61360021
+    
+    if( $this->post === null ) // news not found hit 404 message
+    {
+      $this->setStatusCode(404);
+      return $this->controller->run('404');
+    }
+    
   }
 
 }

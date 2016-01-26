@@ -1,19 +1,27 @@
 {% set post = __SELF__.post %}
 
+{% if post %}   
+
 <h1> {{ post.title }} </h1>
 
-{% if post.image %}            
-<img src="{{ post.image | media }}" alt="image" class='img-responsive' />
-{% endif %}
+  {% if post.image %}            
+  <img src="{{ post.image | media }}" alt="image" class='img-responsive' />
+  {% endif %}
 
-{% if post.small_content %}        
-  {{ post.small_content|raw }}
-{% endif %}
+  {% if post.small_content %}        
+    {{ post.small_content|raw }}
+  {% endif %}
 
-{% if post.full_content %}        
-  {{ post.full_content|raw }}
-{% endif %}
+  {% if post.full_content %}        
+    {{ post.full_content|raw }}
+  {% endif %}
 
-<p class="info">
-  Posted on {{ post.published_at|date('Y-m-d') }}
-</p>
+  <p class="info">
+    Posted on {{ post.published_at|date('Y-m-d') }}
+  </p>
+
+{% else %}
+
+  News not found!
+
+{% endif %}
